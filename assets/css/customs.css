@@ -1,0 +1,58 @@
+.wrapper.style1, #nav{
+
+background-color: #3fcbba;
+
+}
+.wrapper.style2{
+	background-color: #c84712;
+}
+
+.wrapper.style3{
+	background-color: #f3ac22;
+}
+
+
+#nav .liAgenda{
+
+background: #383838;
+
+}
+
+.logo {
+	float: left;
+	width: 25%;
+}
+
+
+
+.navWithLogo {
+	left: auto !important;
+    right: 0;
+    width: 70% !important;
+}
+
+#main, #header, #reel {
+	height: auto !important;
+
+	
+}
+
+#header {
+	box-shadow:  none !important;
+	border: none !important;
+}
+
+
+
+#main::-webkit-scrollbar { 
+    display: none; 
+}
+
+#reel {
+	width: 2200px;
+	border: none !important;
+}
+
+.backgroundGreen {
+	background-color: #54ac0c !important;
+}
