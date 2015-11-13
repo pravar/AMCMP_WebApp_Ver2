@@ -31,17 +31,52 @@ background: #383838;
     width: 70% !important;
 }
 
-#main, #header, #reel {
+#main, .item, #reel {
 	height: auto !important;
 
 	
 }
 
-#header {
-	box-shadow:  none !important;
-	border: none !important;
+#main {
+	overflow-x: auto;
+    overflow-y: hidden;
 }
 
+.item {
+	box-shadow:  none !important;
+	border: none !important;
+    color: #fff;
+    cursor: default;
+    margin-right: 3px;
+    float: left;
+}
+
+.item .inner img {
+	position: relative !important;
+	/*background-position: 0px 0px; 
+	background-size: 150% 150%;
+	background: url('images/crops/icon-sprite.PNG') no-repeat; */
+
+}
+.item .inner {
+	padding-left: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+.timeStamp {
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.timeStamp span.hour {
+	font-size: 1.5em;
+	font-weight: 200;
+}
+
+.timeStamp h3 {
+
+	display: inline;
+}
 
 
 #main::-webkit-scrollbar { 
@@ -55,4 +90,49 @@ background: #383838;
 
 .backgroundGreen {
 	background-color: #54ac0c !important;
+}
+
+.backgroundWhite .inner {
+	background-color: #fff !important;
+}
+
+.backgroundWhite .timeStamp, .backgroundWhite p {
+	color: #000;
+}
+
+.backgroundWhite p {
+	text-align: left;
+	line-height: 1em;
+	margin-bottom: 10px; 
+}
+
+.meetingDetails {
+	width: auto !important;
+	max-width: 300px;
+}
+
+.presentationDiv, .feedBackDiv {
+	margin-top: 1px;
+	padding-top: 10px;
+
+}
+
+.feedBackDiv {
+	cursor: pointer;
+}
+
+.imgPresentation {
+	margin: 0 auto;
+	background: url('images/crops/icon-sprite.PNG') no-repeat;
+	background-position: 0px -111px; 
+	width: 28px;
+	height: 34px;
+}
+
+.imgFeedBack{
+	margin: 0 auto;
+	background: url('images/crops/icon-sprite.PNG') no-repeat;
+	background-position: -30px -102px; 
+	width: 39px;
+	height: 51px;
 }
