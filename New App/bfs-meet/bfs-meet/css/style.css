@@ -1611,6 +1611,7 @@ body .modal-header .close {margin-top: -12px;position:relative;left:13px;}
     width: 100% !important;
     margin-left: auto !important;
     height: 100%;
+    overflow-y: auto; 
 }
 
 #connectinDotsModal .modal-dialog{
@@ -1671,8 +1672,8 @@ body .modal-header .close {margin-top: -12px;position:relative;left:13px;}
 #connectinDotsModal .modal-dialog .divImages{
 	background-color: #40caba;
 	height: 180px;
-    width: 60%;
-    margin: 0 auto;
+    /*width: 60%;*/
+    /*margin: 0 auto;*/
 }
 
 .divImages label {
@@ -1683,9 +1684,9 @@ body .modal-header .close {margin-top: -12px;position:relative;left:13px;}
 
 #connectinDotsModal .modal-dialog .divFacts{
 	background-color: #fff;
-	height: 180px;
-    width: 60%;
-    margin: 0 auto;
+	height: 210px;
+    /*width: 60%;*/
+    /*margin: 0 auto;*/
 }
 
 .picContainer {
@@ -1694,9 +1695,122 @@ body .modal-header .close {margin-top: -12px;position:relative;left:13px;}
 	height: 150px;
 }
 
-@media screen and (max-width: 1024px) {
+#connectinDotsModal .modal-dialog .divFacts> div{
+	display: inline-block;
+	width: 23%;
+	border-right: 1px solid #CACECF;
+	vertical-align: top;
+	height: inherit;
+	word-break: break-word;
+	font-size: 1em;
+	position: relative;
+
+
+}
+
+#connectinDotsModal .modal-dialog .divFacts> div input {
+	position: absolute;
+	bottom: 0;
+    width: 91%;
+    border: none;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+    
+}
+
+/*#connectinDotsModal .modal-dialog .divFacts div.last input{
+	width: 105%;
+}
+
+
+#connectinDotsModal .modal-dialog .divFacts> div.first input{
+	margin-left: -22px;
+	width: 105%;
+}*/
+
+/*#connectinDotsModal .modal-dialog .divFacts div.first{
+	margin-left: 23px;
+}*/
+
+#connectinDotsModal .modal-dialog .divFacts div.last{
+	border-right: none;
+}
+
+#connectinDotsModal .panel{
+	height: auto;
+}
+
+#accordionConnectDots {
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+.panel.active .contArrow {
+    background: transparent;
+}
+
+.contArrow {
+    width: 44px;
+    height: 390px;
+    float: left;
+    background: #feecea;
+    border-right: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.contArrow span.sectionDots{position: absolute; left:0; top: 0; background: #000;color: #fff;font-size:12px;width:24px;padding: 5px 10px;}
+.contArrow span.arrow{position: absolute; left:0; top: 50%; background: url("../images/icon-sprite.png") no-repeat scroll -104px -184px transparent;color: #fff;font-size:12px;width:24px;padding: 5px 10px;}
+
+/*Media Queries*/
+
+@media screen and (max-width: 768px) {
     #connectinDotsModal .modal-dialog .divImages , #connectinDotsModal .modal-dialog .divFacts{
         width: 90%;
+        
+
+    }
+    .picContainer {
+    	background-size: 96%;
+    }
+    #connectinDotsModal .modal-dialog .inner{
+
+    }
+    #connectinDotsModal .modal-dialog .divFacts{
+        height: 250px;
+        font-size: 0.85em;
+    }
+    #hdrConnectingDots {
+    	height: 10%;
+    }
+    #connectinDotsModal .modal-dialog .divFacts div.first {
+    	margin-left: 5px;
+	}
+   
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #connectinDotsModal .modal-dialog .divImages , #connectinDotsModal .modal-dialog .divFacts{
+        /*width: 80%;*/
+    }
+ 
+    #connectinDotsModal .modal-dialog .inner{
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+	 #connectinDotsModal .modal-dialog .divImages{
+       height: 140px;
+    }
+     #connectinDotsModal .modal-dialog .divFacts{
+        font-size: 0.75em;
+
+    }
+    
+    .picContainer {
+    	height: 100px;
     }
 }
 
