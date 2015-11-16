@@ -1671,7 +1671,7 @@ body .modal-header .close {margin-top: -12px;position:relative;left:13px;}
 
 #connectinDotsModal .modal-dialog .divImages{
 	background-color: #40caba;
-	height: 180px;
+	height: 190px;
     /*width: 60%;*/
     /*margin: 0 auto;*/
 }
@@ -1684,15 +1684,15 @@ body .modal-header .close {margin-top: -12px;position:relative;left:13px;}
 
 #connectinDotsModal .modal-dialog .divFacts{
 	background-color: #fff;
-	height: 210px;
+	height: 270px;
     /*width: 60%;*/
     /*margin: 0 auto;*/
 }
 
 .picContainer {
 	background: url(../images/picImage1.png) no-repeat center;
-	background-size: 78%;
-	height: 150px;
+	background-size: 62%;
+	height: 168px;
 }
 
 #connectinDotsModal .modal-dialog .divFacts> div{
@@ -1740,7 +1740,7 @@ body .modal-header .close {margin-top: -12px;position:relative;left:13px;}
 }
 
 #accordionConnectDots {
-	width: 90%;
+	width: 70%;
 	margin: 0 auto;
 }
 
@@ -1751,7 +1751,7 @@ body .modal-header .close {margin-top: -12px;position:relative;left:13px;}
 
 .contArrow {
     width: 44px;
-    height: 390px;
+    height: 460px;
     float: left;
     background: #feecea;
     border-right: 0;
@@ -1762,6 +1762,91 @@ body .modal-header .close {margin-top: -12px;position:relative;left:13px;}
 .contArrow span.sectionDots{position: absolute; left:0; top: 0; background: #000;color: #fff;font-size:12px;width:24px;padding: 5px 10px;}
 .contArrow span.arrow{position: absolute; left:0; top: 50%; background: url("../images/icon-sprite.png") no-repeat scroll -104px -184px transparent;color: #fff;font-size:12px;width:24px;padding: 5px 10px;}
 
+
+/*Options dots*/
+.divFacts .optionDots{
+	background: url(../images/icon-sprite-person.png) no-repeat;
+	width: 49px;
+    height: 49px;
+}
+
+.divFacts .dotA{
+	background-position: 0 -260px;
+}
+.divFacts .dotB{
+	background-position: -59px -260px;
+}
+.divFacts .dotC{
+	background-position: -118px -260px;
+}
+.divFacts .dotD{
+	background-position: -176px -260px;
+}
+.divFacts .dotE{
+	background-position: -235px -260px;
+}
+.divFacts .dotF{
+	background-position: -294px -260px;
+}
+.divFacts .dotG{
+	background-position: -353px -260px;
+}
+.divFacts .dotH{
+	background-position: -411px -260px;
+}
+
+.divFacts a.optionDots{
+	margin-left: initial;
+}
+
+.headOptions{
+	position: absolute;
+    bottom: 90px;;
+}
+.tailOptions{
+	position: absolute;
+    bottom: 39px;
+}
+
+
+
+/*Directions*/
+.direction {background: url(../images/Bg-Map) no-repeat center top;
+		 -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	}
+
+
+.aGoogleMaps{
+	background: url(../images/icon-G-Map.png) no-repeat center ;
+	left: 44%;
+}
+.aNrailMaps{
+	background: url(../images/icon-NRail.png) no-repeat center ;
+	left: 47%;
+}
+.aTubeMaps{
+	background: url(../images/icon-Tube.png) no-repeat center ;
+	left: 50%;
+}
+
+.innerDirection {
+	background: url(../images/icon-address-ballon.png) no-repeat center ;
+	    background-size: 50%;
+	position: relative;
+    height: 110%;
+}
+
+.innerDirection a{
+	
+    top: 50%;
+    position: absolute;
+    width: 5%;
+    background-size: 50%;
+    height: 5%;
+}
 /*Media Queries*/
 
 @media screen and (max-width: 768px) {
@@ -1776,16 +1861,16 @@ body .modal-header .close {margin-top: -12px;position:relative;left:13px;}
     #connectinDotsModal .modal-dialog .inner{
 
     }
-    #connectinDotsModal .modal-dialog .divFacts{
+    #connectinDotsModal .modal-dialog .divFacts > div{
         height: 250px;
         font-size: 0.85em;
     }
     #hdrConnectingDots {
     	height: 10%;
     }
-    #connectinDotsModal .modal-dialog .divFacts div.first {
+  /*  #connectinDotsModal .modal-dialog .divFacts div.first {
     	margin-left: 5px;
-	}
+	}*/
    
 }
 
@@ -1804,8 +1889,8 @@ body .modal-header .close {margin-top: -12px;position:relative;left:13px;}
 	 #connectinDotsModal .modal-dialog .divImages{
        height: 140px;
     }
-     #connectinDotsModal .modal-dialog .divFacts{
-        font-size: 0.75em;
+     #connectinDotsModal .modal-dialog .divFacts > div{
+        font-size: 0.85em;
 
     }
     
