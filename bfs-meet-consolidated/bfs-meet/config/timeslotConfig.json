@@ -1,0 +1,227 @@
+﻿[
+    {
+        "timeslot": {
+			"active":"2",
+			"activeSlot":
+				[
+					{
+						"quiz":false
+					},
+					
+					{
+						"quiz":true,
+						"mcq":"<p>When button maker John Taylor and iron producer and dealer Sampson  set up a private banking business in Dale End, Birmingham.</p><p> The first branch office opened in Oldbury, some six miles (10 km) west of Birmingham, in 1864. The symbol adopted by the founder was the beehive, representing industry and hard work.</p>",
+						"qa":"<p>Our wonderful city London has not always had this name, can you tell what it was known as?</p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+								
+					},
+					{
+						"quiz":true,
+						"mcq":"<p>Which of the worlds largest online travel agencies has announced that they will be accepting bitcoins as a payment method.</p>",
+						"qa":"<p>Which is the only football team in London to have a Tube station named after them?</p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+					},
+					{
+
+						"quiz":false
+					},
+					{
+						"quiz":true,
+						"mcq":"<p>In May 1958, the Bank was the first UK bank to appoint a female bank manager. Hilda Harding managed the Bank’s Hanover Square branch in London</p>",
+						"qa":"<p>In a plague pit built in 1665, more than 1,000 bodies are buried underneath this underground station. Which station is this?</p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+					},
+					
+					{
+						"quiz":true,
+						"mcq":"<p>Which European city is planning on launching its own digital currency?</p>",
+						"qa":"<p>Only two Tube stations have all five vowels in their name. Identify them.</p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+					},
+					{
+						"quiz":true,
+						"mcq":"<p>The company organically entered the leasing and credit card sectors, and its introduction of US dollar denominated certificates of deposit in London marked the first new negotiable instrument in the market since 1888. Later to become part of MasterCard, the bank introduced credit card – popularly known as the 'Everything Card' in 1967.</p>",
+						"qa":"<p>Name an ancient invention still in use in most parts of the world today that allows people to see through walls.</p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+					},
+					{
+						"quiz":true,
+						"mcq":"<p>Founded by Alfred Escher in 1856 under the name Schweizerische Kreditanstalt in order to fund the development of Switzerland's rail system. It issued loans that helped create Switzerland's electrical grid and the European rail system. It also helped develop the country's currency system and funded entrepreneurship.</p>",
+						"qa":"<p>If the day after the day before yesterday was Tuesday, and the day before the day after tomorrow is Thursday, what day is today?</p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+					},
+					{
+						"quiz":true,
+						"mcq":"<p>Formed in Glasgow in 1838, it is the smallest of the three Scottish banks. Independent until it was purchased by the Midland Bank in 1920, it was sold to its present owners, the National Australia Bank (NAB) in 1987.</p>",
+						"qa":"<p>How can you throw a ball as hard as you can, and make it stop and return to you, without hitting anything and with nothing attached to it? </p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+					},
+					{
+						
+						"quiz":false
+					},
+					{
+						"quiz":true,
+						"mcq":"<p>What is a phrase long used on trading floors to describe a short-lived recovery of share prices in a falling stock market.</p>",
+						"qa":"<p>The one who makes it sells it.The one who buys it doesn't use it.The one who's using it doesn't know he's using it.What is it?</p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+					},
+					{
+						"quiz":true,
+						"mcq":"<p>Which bank has the following slogan ‘Love your bank at last’?</p>",
+						"qa":"<p>What can you hold in your right hand, but not in your left?</p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+					},
+					{
+						"quiz":true,
+						"mcq":"<p>It became one of the first merchant banks to establish itself in the Channel Islands, having set up offices in Jersey in 1962 and Guernsey in 1963.</p>",
+						"qa":"<p>In London Its illegal to die in this place. Which place is this?</p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+					},
+					{
+						"quiz":true,
+						"mcq":"<p>: This is it the Signature of United States financier , identify him.</p>",
+						"qa":"<p>What can you hold in your right hand, but not in your left?</p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+					},
+					{
+						
+						"quiz":false
+					},
+					{
+						"quiz":true,
+						"mcq":"<p>: This is it the Signature of United States financier , identify him.</p>",
+						"qa":"<p>What can you hold in your right hand, but not in your left?</p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+					},
+					{
+						"quiz":true,
+						"mcq":"<p>: This is it the Signature of United States financier , identify him.</p>",
+						"qa":"<p>What can you hold in your right hand, but not in your left?</p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+					},
+					{
+						"quiz":true,
+						"mcq":"<p>: This is it the Signature of United States financier , identify him.</p>",
+						"qa":"<p>What can you hold in your right hand, but not in your left?</p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+					},
+					{
+						"quiz":true,
+						"mcq":"<p>: This is it the Signature of United States financier , identify him.</p>",
+						"qa":"<p>What can you hold in your right hand, but not in your left?</p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+					},
+					{
+						"quiz":true,
+						"mcq":"<p>: This is it the Signature of United States financier , identify him.</p>",
+						"qa":"<p>What can you hold in your right hand, but not in your left?</p>",
+						"ans":
+							
+								{
+									"ansOne":"thumb-Barclays.jpg",
+									"ansTwo":"thumb-LBG.jpg",
+									"ansThree":"thumb-RBS.jpg"
+								}
+					},
+					{
+						
+						"quiz":false
+					}
+
+				]
+			
+
+        }
+    }
+]
