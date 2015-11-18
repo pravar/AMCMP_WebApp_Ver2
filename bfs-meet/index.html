@@ -363,15 +363,17 @@ $(".nav li a").on("click", function() {
                     $(this).closest('.panel').addClass('completed');
                     $(this).addClass('selected');
                     $.ajax({
-                        url: "config/gameConfig.json",// need to place service url
+                        url: "http://bfsamcp.cognizant.com:8080/bfsquizamcp/rest/storequizres",// need to place service url
                         type: 'GET',
                         async:false,
                         contentType: "application/text; charset=utf-8",
                         dataType: 'text',
                         cache: false,
                         data: {
-                            selectedQuiz1: $(this).find('img').attr('data-quiz'),
-                            QuizNo: obj[0].timeslot.active
+                            quizRes: $(this).find('img').attr('data-quiz'),
+                            eventId: obj[0].timeslot.active,
+                            userId: loggedInUser,
+                            quizId: "quiz1"
                
                         },
                         success: function(data){
@@ -391,15 +393,17 @@ $(".nav li a").on("click", function() {
                     prevActiveSlot = obj[0].timeslot.active;
                     
                     $.ajax({
-                        url: "config/gameConfig.json",// need to place service url
+                        url: "http://bfsamcp.cognizant.com:8080/bfsquizamcp/rest/storequizres",// need to place service url
                         type: 'GET',
                         async:false,
                         contentType: "application/text; charset=utf-8",
                         dataType: 'text',
                         cache: false,
                         data: {
-                            selectedQuiz2: $(this).closest('form').find('input').val(),
-                            QuizNo: obj[0].timeslot.active
+                            quizRes: $(this).closest('form').find('input[type="text"]').val(),
+                            eventId: obj[0].timeslot.active,
+                            quizId: "quiz2",
+                            userId:loggedInUser
                
                         },
                         success: function(data){
@@ -464,7 +468,7 @@ $("#agendaModal .btn-submit").on('click',function(){
                         success: function(data){
                             var obj =$.parseJSON(data);
                             $.ajax({
-                                url: "config/gameConfig.json",// need to place service url
+                                url: "http://bfsamcp.cognizant.com:8080/bfsquizamcp/rest/storefeedback",// need to place service url
                                 type: 'GET',
                                 async:false,
                                 contentType: "application/text; charset=utf-8",
@@ -475,7 +479,8 @@ $("#agendaModal .btn-submit").on('click',function(){
                                     selectedfeedback2: $("#agendaModal").find('p.answers:eq(1)').find('.emoticons.active').attr('data-level'),
                                     selectedfeedback3: $("#agendaModal").find('p.answers:eq(2)').find('.emoticons.active').attr('data-level'),
                                     suggestions: $("#agendaModal").find('input[type="text"]').val(),
-                                    feedbackforSlotNo: obj[0].timeslot.active
+                                    eventId: obj[0].timeslot.active,
+                                    userId: loggedInUser
                                 },
                                 success: function(data){console.log('Feedback for the session posted to server');}
                                 });
@@ -538,61 +543,94 @@ map = new GMaps({
         <div id="maincontent" role="main">
             <div class="row">
                 <div class="col-xs-12 col-md-3">
-         
+
                     <div id="accordion" style="visibility:hidden;">
                         <div class="panel">
                             <div class="pink"><span class="questionNo">Q1</span><span class="arrow">&nbsp;</span></div>
                             <div class="panelContent p1">
-                                
+
                             </div>
                         </div>
                         <div class="panel">
                             <div class="pink"><span class="questionNo">Q2</span><span class="arrow">&nbsp;</span></div>
                             <div class="panelContent p2"> <strong>Section 2 Header</strong><br/>
-                                
+
                             </div>
                         </div>
                     </div>
-                
+
                 </div>
             </div>
         </div>
 </div>  
 <div class="fluid-container games" id="games">
     <div>
-    <h2>&nbsp;</h2>
-</div>
-        <div id="maincontent" role="main">
-          
-
-                <div class="containerTeamGames">
-                    <div class='innerDivGames divConnectingDots'>
-                        <h2 id="connectingTheDots"></h2>
-                        <span class='dots'>CONNECTING<br><br>THE DOTS</span>
-                    </div>
-                    <div class='innerDivGames divPuzzle'>
-                        <h2 id="puzzle"></h2>
-                        <span class='puzzle'>PUZZLE</span>
+        <h2>&nbsp;</h2>
+    </div>
+    <div id="teamgame" role="main">
+        <div class="containerTeamGames">
+            <div class='innerDivGames divConnectingDots'>
+                <h2 id="connectingTheDots"></h2>
+                <span class='dots'>CONNECTING<br><br>THE DOTS</span>
+            </div>
+            <div class='innerDivTeamGames'>
+                <div id="puzzleId">
+                    <div class="divText">
+                        <span class="puzzleText">PUZZLE</span>
                     </div>
                 </div>
-           
-        </div>
-</div>
-<div class="fluid-container direction" id="direction">
-        <div id="maincontent" role="main">
-            <div class="row">
-                <div class="col-xs-12 col-md-3">
-                    <div class="row">
-                        <div class="span11">
-                            <div class="popin">
-                                <div id="map"></div>
-                            </div>
-                        </div>
+                <div id="afterPuzzleClick">
+                    <div class="divText">
+                        <span class="puzzleText" style="cursor: auto">PUZZLE</span>
+                        <br>
+                        <span style="color: #002a80;font-size: 14px;font-weight: bold">Have you solve the puzzle?</span>
+                        <br>
+                        <span style="color: #000000;font-size: 12px">Click a picture and upload.</span>
+                        <br>
+                        <img class="uploadIcon"/>
+                        <span id="uploadId" style="color:#006dcc;font-size: 14px; cursor: pointer">
+                            Upload
+                            <input type="file" name="files[]" id="myFile" style="visibility: hidden" width="0px">
+                        </span>
+                    </div>
+                </div>
+                <div id="afterUploadSuccessful">
+                    <div class="divText" style="top: 150px">
+                        <input type="text" id="puzzleName" width="150px">
+                        <br>
+                        <button type="button" class="btn btn-default" id="submitTeamGame">Submit</button>
+                    </div>
+                </div>
+                <div id="afterSubmitClick">
+                    <div class="divText " style="top: 150px">
+                        <span style="color: #FFFFFF;font-size: 14px;font-weight: bold">
+                            Congratulations
+                        </span>
+                        <br>
+                        <span style="color: #FFFFFF;font-size: 12px">
+                            The puzzle is submitted successfully
+                        </spa   n>
+                        <br>
+                        <br>
+                        <img class="successIcon"/>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </div>
+<div class="fluid-container direction" id="direction">
+                
+                <div class="innerDirection">
+                    <div class="textToolTipDir">Le Meridien Piccadilly</div><div class="tooltipHall">Hall<br>21, Piccadilly, Mayfair, London W1J OBH</div>
+
+                    <a href='https://www.google.com/maps?q=lemeridien+piccadilly+london' class='aGoogleMaps'> </a>
+                    <a href='http://www.nationalrail.co.uk/static/documents/content/Network_Rail_national_map(1).pdf' class='aNrailMaps'> </a>
+                    <a href='http://content.tfl.gov.uk/standard-tube-map.pdf' class='aTubeMaps'> </a>
+                </div>
+         
+</div>
+
 
 <!-- Modal -->
   
@@ -644,7 +682,8 @@ map = new GMaps({
     </div>
 </div>
 
-<div class="modal fade modalFullWidthHeight hide" id="loginModal" role="dialog" >
+<div class="modal fade modalFullWidthHeight hide" id="loginModal" role="dialog" data-backdrop="static" 
+   data-keyboard="false" >
    
     <div class="modal-dialog container">
         <div class='inner'>
@@ -668,6 +707,17 @@ map = new GMaps({
         </div>        
     </div>
 </div>
+
+<div class="modal fade hide" id="gameNotAvailable" role="dialog">
+      <div class="modal-header">
+          <button data-dismiss="modal" class="close" style='float:left' type="button">×</button>
+      </div>
+
+       <div class="modal-dialog container">
+        <h3>This game is not available for play at this moment!</h3>
+       </div>
+</div>
+
 
 <div class="modal fade hide modalFullWidthHeight" id="connectinDotsModal" role="dialog" data-backdrop="static" 
    data-keyboard="false" >
@@ -842,7 +892,9 @@ map = new GMaps({
                        </div>     
                     </div>
                 </div>
-                <input type='submit' id='btnSubmitConnectingDots' class='' text='Submit' value='Submit'/ >
+                <div style='clear:both'>
+                    <input type='submit' id='btnSubmitConnectingDots' class='' text='Submit' value='Submit'/ >
+                </div>
             </div>
         </div>    
 </div>

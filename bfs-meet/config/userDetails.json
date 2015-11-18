@@ -1,0 +1,16 @@
+{
+  "status": "true",
+  "events": [
+    {
+      "eventId": "event1",
+      "quizIds": [
+        "quiz1",
+        "quiz2"
+      ]
+    }
+  ],
+  "gameIds": [
+    
+    "puzzle"
+  ]
+}

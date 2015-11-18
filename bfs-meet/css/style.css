@@ -1,5 +1,101 @@
 /** ----- Scheduler ------------ **/
 
+.innerDivTeamGames{
+	display: inline;
+	position: relative;
+	//border: solid 2px;
+}
+
+#puzzleId {
+	top: -255px;
+	display: inline-block;
+	position: relative;
+	background: url(../images/Team-game-Quiz.png) no-repeat center top;
+	background-size: 100%;
+	width: 275px;
+	height: 275px;
+	text-align: center;
+}
+
+#afterPuzzleClick {
+	top: -151px;
+	display: inline-block;
+	position: relative;
+	background: url(../images/Team-game-upload.png) no-repeat center top;
+	background-size: 100%;
+	width: 275px;
+	height: 275px;
+	text-align: center;
+}
+
+#afterUploadSuccessful{
+	top: -213px;
+	display: inline-block;
+	position: relative;
+	background: url(../images/Team-game-upload.png) no-repeat center top;
+	background-size: 100%;
+	width: 275px;
+	height: 275px;
+	text-align: center;
+}
+
+#afterSubmitClick{
+	top: -215px;
+	display: inline-block;
+	position: relative;
+	background: url(../images/Team-game-Quiz-success.png) no-repeat center top;
+	background-size: 100%;
+	width: 275px;
+	height: 275px;
+	text-align: center;
+}
+
+.puzzleText
+{
+	text-align:center;
+	color: #FFFFFF;
+	font-size: 20px;
+	text-transform: uppercase;
+	width: 275px;
+	margin: 0 auto;
+	display: block;
+	cursor: pointer;
+	position: relative;
+}
+
+
+.divText
+{
+	position: relative;
+	text-align:center;
+	top: 115px;
+}
+
+
+.uploadIcon {
+	position: relative;
+	width:30px;
+	height:25px;
+//border:solid 1px;
+	background: url('../images/icon-sprite-new.png') -148px -115px;
+}
+/*.uploadIcon:hover {
+	position: relative;
+	width:30px;
+	height:25px;
+//border:solid 1px;
+	background: url('../images/icon-sprite-new.png') -188px -115px;
+}*/
+.successIcon {
+	position: relative;
+	width:38px;
+	height:36px;
+//border:solid 1px;
+	background: url('../images/icon-sprite-new.png') -195px -183px;
+
+}
+
+
 #schedule{
 
 }
@@ -1823,6 +1919,10 @@ form input[type=text] {
 	min-height: 667px;
 }
 
+#connectinDotsModal .panel.active {
+	width:88%;
+	overflow: auto;
+}
 
 
 .innerDivGames{
@@ -1833,8 +1933,8 @@ form input[type=text] {
 
 .innerDivGames span { 
     position: absolute;
-    top: -141px;
-    left: 79px;
+    top: -152px;
+    left: 72px;
     color: #FFF;
     font-size: 20px;
     z-index: 200;
@@ -2023,8 +2123,37 @@ form input[type=text] {
 
 body .modal.modalFullWidthHeight  {
 	left: 0 !important;
+	overflow-y: auto; 
 }
 
+#map .overlay {
+	line-height: 50px !important;
+}
+
+.textToolTipDir {
+	font-size: 1.5em;
+    color: #fff;
+    left: 44%;
+    position: absolute;
+    top: 39%;
+}
+
+.tooltipHall {
+	font-size: 1em;
+	color: #fff;
+    left: 44%;
+    position: absolute;
+    top: 43%
+  }
+
+.tooltipAddress {
+top: 44%
+}
+
+
+.overlay_arrow.above  {
+	top: 0;
+}
 
 /*Directions*/
 .direction {background: url(../images/Bg-Map) no-repeat center top;
@@ -2049,7 +2178,7 @@ body .modal.modalFullWidthHeight  {
 }
 
 .innerDirection {
-	background: url(../images/icon-address-ballon.png) no-repeat center ;
+	background: url(../images/icon-address-ballon-2.png) no-repeat center ;
 	    background-size: 50%;
 	position: relative;
     height: 110%;
@@ -2065,7 +2194,7 @@ body .modal.modalFullWidthHeight  {
 }
 
   #connectinDotsModal .modal-dialog .divFacts div.first {
-    	margin-left: 20px;
+    	margin-left: 16px;
 	}
 
 	body .modalFullWidthHeight  .modal-header .close{
@@ -2085,11 +2214,10 @@ body .modal.modalFullWidthHeight  {
 /*Media Queries*/
 
 @media screen and (max-width: 768px) {
-   /* #connectinDotsModal .modal-dialog .divImages , #connectinDotsModal .modal-dialog .divFacts{
-        width: 90%;
-        
+  	body{
+    	overflow-y: auto !important; 
+    }
 
-    }*/
     .picContainer {
     	background-size: 96%;
     }
@@ -2111,9 +2239,52 @@ body .modal.modalFullWidthHeight  {
     	margin-left: 5px;
 	}*/
    
+
+	.innerDirection {
+    	background-size: 100%;
+    }
+    .innerDirection a {
+    	background-size: 100%;
+    	top: 51%;
+    }
+    .aGoogleMaps {
+    	left: 55%;
+    }
+     .aNrailMaps {
+    	left: 62%;
+    }
+
+    .aTubeMaps {
+    	left: 69%;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .textToolTipDir {
+
+    left: 38%;
+
+}
+
+.tooltipHall {
+
+    left: 38%;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+	.textToolTipDir {
+
+    left: 42%;
+
+}
+
+.tooltipHall {
+
+    left: 42%;
+  }
     #connectinDotsModal .modal-dialog .divImages , #connectinDotsModal .modal-dialog .divFacts{
         /*width: 80%;*/
     }
@@ -2121,10 +2292,41 @@ body .modal.modalFullWidthHeight  {
     #connectinDotsModal .modal-dialog .inner{
 
     }
+
+    .innerDirection {
+    	background-size: 80%;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    
+     .innerDirection {
+    	background-size: 100%;
+    }
+    .innerDirection a {
+    	background-size: 100%;
+    	top: 51%;
+    }
+    .aGoogleMaps {
+    	left: 55%;
+    }
+     .aNrailMaps {
+    	left: 62%;
+    }
+
+    .aTubeMaps {
+    	left: 69%;
+    }
+
+    .textToolTipDir {
+		font-size: 1em;
+		top: 42%;
+	}
+
+	.tooltipHall, .tooltipAddress {
+		font-size: 0.75em;
+		    top: 45%;
+    line-height: 14px;
+	}
 	 #connectinDotsModal .modal-dialog .divImages{
        height: 140px;
     }
@@ -2139,6 +2341,23 @@ body .modal.modalFullWidthHeight  {
 
     #accordionConnectDots{
     	width: 100%;
+    }
+    #connectinDotsModal .modal-dialog .divFacts> div {
+    	width: 21%;
+    }
+
+    #connectinDotsModal .modal-dialog .divFacts> div input,.selectedPerson{
+    	position: relative;
+    	bottom: 0;
+    }
+    #connectinDotsModal .modal-dialog .divFacts, #connectinDotsModal .modal-dialog .divFacts > div {
+    	height: 500px;
+    }
+    #connectinDotsModal .modal-dialog .divFacts> div input {
+    	width: 75%;
+    }
+    body{
+    	overflow-y: auto !important; 
     }
 }
 

@@ -8,7 +8,21 @@ $(document).ready(function() {
     },
 
     fnDisableAttemptedQuiz = function(data) {
-        console.log(data);
+        var isConnectingDotsPlayed = false;
+        if($.inArray('puzzle', data.gameIds) != -1) {
+            if(data.gameIds.length > 1) {
+                isConnectingDotsPlayed = true;
+            }
+        }
+        else {
+            if(data.gameIds.length > 0) {
+                isConnectingDotsPlayed = true;
+            }
+        }
+        if(isConnectingDotsPlayed) {
+            $('#connectingTheDots').attr('disabled','disabled');
+            $('.divConnectingDots, #connectingTheDots').addClass('attempted');
+        }
     }
 
 	$('#btnSubmitLogin').on('click', function(){
@@ -21,7 +35,7 @@ $(document).ready(function() {
         else{
                 //http://localhost:8080/bfsquizamcp/rest/validateuser/ to be called
         		$.ajax({
-                    url: "config/userDetails.json",
+                    url: "http://bfsamcp.cognizant.com:8080/bfsquizamcp/rest/validateuser/"
                     type: 'GET',
                     async:false,
                     contentType: "application/text; charset=utf-8",
@@ -36,11 +50,12 @@ $(document).ready(function() {
                         //var responseObj = JSON.parse(data), loginId = $('#txtLoginId')
                         var loginResponse = $.parseJSON(data);
                         	console.log('logged in');
+                            debugger;
                         	if(loginResponse.status) {
                         		$('#loginModal').modal('hide');
                                 //Global variable to store userName
                                 loggedInUser = $('#txtUserName').val();
-                                fnDisableAttemptedQuiz(data);
+                                fnDisableAttemptedQuiz($.parseJSON(data));
                         	}
                         	else {
                         		errorFunction();
